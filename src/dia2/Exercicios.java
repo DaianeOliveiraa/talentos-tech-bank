@@ -127,14 +127,14 @@ public class Exercicios {
 
     }
 
-    public static void exercicio5(){
+    public static void exercicio5() {
         //Escreva um algoritmo em Java que seja capaz de fazer as seguintes operações matemáticas
         // (adição, subtração, multiplicação e divisão). Todas as operações serão entre dois valores.
         // No começo do algoritmo pergunte ao usuário qual operação ele deseja fazer e quais são os valores.
         Scanner in = new Scanner(System.in);
         System.out.println("Escolha qual operação deseja realizar: \n1-Adição\n2-Subtração\n3-Multiplicação\n4-Divisão");
 
-        if(!in.hasNext()) {
+        if (!in.hasNext()) {
             System.out.println("Valor inválido. Digite número do tipo inteiro.");
             in.close();
             System.exit(1);
@@ -142,7 +142,7 @@ public class Exercicios {
 
         int n = in.nextInt();
         System.out.println("Insira dois valores: ");
-        if(!in.hasNext()) {
+        if (!in.hasNext()) {
             System.out.println("Valor inválido. Digite número do tipo inteiro.");
             in.close();
             System.exit(1);
@@ -150,63 +150,57 @@ public class Exercicios {
         float valor1 = in.nextFloat();
         float valor2 = in.nextFloat();
 
-        if(n==1){
-            float adicao = valor1+valor2;
-            System.out.println("Resultado da Adição é: " +adicao);
-        }else if(n==2){
-            float subtracao = valor1-valor2;
-            System.out.println("Resultado da Subtração é: " +subtracao);
-        }else if(n==3){
-            float multiplicacao = valor1*valor2;
-            System.out.println("Resultado da Multiplicação é: " +multiplicacao);
-        }else if(n==4){
-            float divisao = valor1/valor2;
-            System.out.println("Resultado da Divisão é: " +divisao);
-        }else{
-            System.out.println("Opção escolhida não corresponde às operações disponiveis.");
-        }
+        if (n == 1) {
+            float adicao = valor1 + valor2;
+            System.out.println("Resultado da Adição é: " + adicao);
+        } else if (n == 2) {
+            float subtracao = valor1 - valor2;
+            System.out.println("Resultado da Subtração é: " + subtracao);
+        } else if (n == 3) {
+            float multiplicacao = valor1 * valor2;
+            System.out.println("Resultado da Multiplicação é: " + multiplicacao);
+        } else if (n == 4) {
+            if (valor2 == 0) {
+                System.out.println("Não se pode dividir por 0");
+            } else {
+                float divisao = valor1 / valor2;
 
-    }
-
-    public static void exercicio6() {
-        //Faça a implementação do Jogo Pedra, Papel e Tesoura (Jokempô). O algoritmo deverá
-        // perguntar qual é a escolha do jogador 1 (Pedra [pe], Papel [pa], Tesoura [t]) e
-        // deverá fazer o mesmo para o jogador 2.
-        // No final da execução o algoritmo deverá dizer qual é o jogador vencedor ou se houve empate
-
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Jogador 1, escolha entre: \n1[pe]-Pedra\n2[pa]-Papel\n2[t]-Tesoura");
-        int jogador1 = in.nextInt();
-        System.out.println("Jogador 2, escolha entre: \n1[pe]-Pedra\n2[pa]-Papel\n3[t]-Tesoura");
-        int jogador2 = in.nextInt();
-
-
-        if (jogador1 == 1 && jogador2 == 1) {
-            System.out.println("Empate!");
-            if (jogador2 == 2)
-                System.out.println("Jogador 1 = Pedra \nJogador2 = Papel \nJogador 2 ganhou!");
-            if (jogador2 == 3)
-                System.out.println("Jogador 1 = Pedra \nJogador2 = Tesoura \nJogador 1 ganhou!");
-
-        } else if (jogador1 == 2 && jogador2 == 2) {
-            System.out.println("Empate!");
-                if (jogador2 == 1)
-                System.out.println("Jogador 1 = Papel \nJogador2 = Pedra \nJogador 1 ganhou!");
-                if (jogador2 == 3)
-                System.out.println("Jogador 1 = Papel \nJogador2 = Tesoura \nJogador 2 ganhou!");
-
-        }else if (jogador1 == 3 && jogador2 == 3) {
-                System.out.println("Empate!");
-                if (jogador2 == 2)
-                    System.out.println("Jogador 1 = Tesoura \nJogador2 = Papel \nJogador 1 ganhou!");
-                if (jogador2 == 1)
-                    System.out.println("Jogador 1 = Tesoura \nJogador2 = Pedra \nJogador 2 ganhou!");
-
-                }
-        else{
-            in.close();
-        }
+                System.out.println("Resultado da Divisão é: " + divisao);
             }
         }
+         else{
+                System.out.println("Opção escolhida não corresponde às operações disponiveis.");
+            }
+
+        }
+
+        public static void exercicio6 () {
+            //Faça a implementação do Jogo Pedra, Papel e Tesoura (Jokempô). O algoritmo deverá
+            // perguntar qual é a escolha do jogador 1 (Pedra [pe], Papel [pa], Tesoura [t]) e
+            // deverá fazer o mesmo para o jogador 2.
+            // No final da execução o algoritmo deverá dizer qual é o jogador vencedor ou se houve empate
+
+            Scanner in = new Scanner(System.in);
+
+            System.out.println("Jogador 1, escolha entre: \n1[pe]-Pedra\n2[pa]-Papel\n3[t]-Tesoura");
+            int jogador1 = in.nextInt();
+            System.out.println("Jogador 2, escolha entre: \n1[pe]-Pedra\n2[pa]-Papel\n3[t]-Tesoura");
+            int jogador2 = in.nextInt();
+
+
+            if (jogador1 == 1 && jogador2 == 1 || jogador1 == 2 && jogador2 == 2 || jogador1 == 3 && jogador2 == 3) {
+                System.out.println("Empate!");
+
+            } else if (jogador1 == 1 && jogador2 == 3 || jogador1 == 2 && jogador2 == 3 || jogador1 == 3 && jogador2 == 2) {
+                System.out.println("Jogador 1 ganhou!");
+            }
+
+            else if (jogador1 == 1 && jogador2 == 2 || jogador1 == 2 && jogador2 == 3 || jogador1 == 3 && jogador2 == 2) {
+                System.out.println("Jogador 2 ganhou!");
+
+            } else {
+                System.out.println("Opção inválida");
+            }
+        }
+    }
 
