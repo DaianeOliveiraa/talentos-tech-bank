@@ -2,56 +2,44 @@ package dia3;
 
 public class Main {
 
-   /* public static int metodoRecursivo(int i) {
-        if (i <= 10) {
-            return metodoRecursivo(i + 1);
-        }
-
-    }*/
-
     public static void main(String[] args) {
-        System.out.println("WHILE");
-        int contagem = 1;
 
-        while (contagem < 11) {
-            System.out.println(contagem);
-            contagem++;
-        }
-
-        System.out.println("DO WHILE");
-        contagem = 1;
-        do {
-            System.out.println(contagem);
-            contagem++;
-        } while (contagem < 11);
-    }
-}
-    //testando o dowhile
-
-    /*boolean condicao = true;
-
-
-    do{
-        if (i > 0) {
-            condicao = false;
-        }
-    } while(condicao);
-
-    System.out.println("FOR")
-
-    for(int i=0; i<=10; i++){
-        System.out.println(i);
     }
 
+    public static void operadores(){
+        //Atribuição
+        int idade = 20;
+
+        int i = 1+1; //+ - * / ++ -- %
+
+        System.out.println(10.0 / 3.0);
+        System.out.println(10 %  3);
 
 
+        boolean operadorRelacional = 1 == 2; // ==, !=, >, <, >=, <=
+        //boolean tiposDiferentes = "1" == 1; Impossível de fazer no Java
 
+        //Operadores Lógicos
 
-//TODO PESQUISAR CENARIOS MELHORES PARA WHILE E DO WHILE
+        boolean testeLogio = 1 == 1 || 2 ==1;
 
-    //para (i=0; i<10; i++)
+        boolean invertido = !true;
+    }
 
+    public static void primeiroIf(){
+        //int idade = 17;
+        int idade = 1000;
+        // boolean teste = idade >= 18;
 
+        if(idade < 0){
+            System.out.println("Idade inválida.");
+        } else if (idade >= 150){
+            System.out.println("Idade inválida");
+        } else if (idade >= 18){
+            System.out.println("Você tem permissão para assistir esse conteúdo.");
+        } else {
+            System.out.println("Você não tem permissão para assistir esse conteúdo");
+        }
 
+    }
 }
-*/
