@@ -239,6 +239,6 @@ public class Exercicios {
         //exercicio4();
         //exercicio5();
         //forca();
-        desafio2();
+        //desafio2();
     }
 }
